@@ -30,7 +30,7 @@ Example:
 your_app/settings.py:
 > 
 <pre>
-**ADD**
+<strong>ADD</strong>
 AUTH0_DOMAIN = "your_app.eu.auth0.com"
 </pre>
 
