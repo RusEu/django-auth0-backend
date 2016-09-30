@@ -12,7 +12,7 @@ AUTHENTICATION_BACKENDS = (
 )
 </pre>
 
-If you need it in Django Rest FrameworkL
+If you need it in Django Rest Framework
 
 ><pre>
 REST_FRAMEWORK = {
@@ -28,8 +28,11 @@ in the django-auth0-backend you need to change the import config file with the f
 Example:
 
 your_app/settings.py:
-> **ADD**
-> AUTH0_DOMAIN = "your_app.eu.auth0.com"
+> 
+<pre>
+**ADD**
+AUTH0_DOMAIN = "your_app.eu.auth0.com"
+</pre>
 
 django-app-where-you-store-the-new-backend/django-auth0-backend.py
-> from your_app import config as c **to** from your_app import settings as c 
+> from your_app import config as c **TO** from your_app import settings as c 
