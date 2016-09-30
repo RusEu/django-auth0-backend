@@ -1,7 +1,7 @@
 from django.contrib.auth.models import User
 from rest_framework import authentication
 from rest_framework import exceptions
-from your_project import config as c
+from your_project import settings as c
 import requests
 
 class Auth0Backend(authentication.BaseAuthentication):
