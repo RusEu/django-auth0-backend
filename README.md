@@ -32,6 +32,3 @@ Example:
 <pre>
 AUTH0_DOMAIN = "your_app.eu.auth0.com"
 </pre>
-
-**MODIFY IN** django-app-where-you-store-the-new-backend/django-auth0-backend.py
-> from your_app import config as c **TO** from your_app import settings as c 
