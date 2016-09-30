@@ -5,20 +5,20 @@ Django authentication backend for Auth0
 
 If you need it in Django:
 
-AUTHENTICATION_BACKENDS = (
-    'django.contrib.auth.backends.ModelBackend', #Your by default django auth backend
-    'django-app-where-you-store-the-new-backend.django-auth0-backend', #your new auth0 backend
-)
+>AUTHENTICATION_BACKENDS = (
+>    'django.contrib.auth.backends.ModelBackend', #Your by default django auth backend
+>    'django-app-where-you-store-the-new-backend.django-auth0-backend', #your new auth0 backend
+>)
 
 If you need it in Django Rest FrameworkL
 
-REST_FRAMEWORK = {
-    'DEFAULT_AUTHENTICATION_CLASSES': (
-        'django-app-where-you-store-the-new-backend.django-auth0-backend', #your new auth0 backend
-        'rest_framework.authentication.BasicAuthentication',
-        'rest_framework.authentication.SessionAuthentication',
-    )
-}
+>REST_FRAMEWORK = {
+>    'DEFAULT_AUTHENTICATION_CLASSES': (
+>        'django-app-where-you-store-the-new-backend.django-auth0-backend', #your new auth0 backend
+>        'rest_framework.authentication.BasicAuthentication',
+>        'rest_framework.authentication.SessionAuthentication',
+>    )
+>}
 
 in the django-auth0-backend you need to change the import config file with the file where you store your Auth0 domain.
 Example:
