@@ -27,12 +27,11 @@ REST_FRAMEWORK = {
 in the django-auth0-backend you need to change the import config file with the file where you store your Auth0 domain.
 Example:
 
-your_app/settings.py:
+**ADD IN** in your_app/settings.py:
 > 
 <pre>
-<strong>ADD</strong>
 AUTH0_DOMAIN = "your_app.eu.auth0.com"
 </pre>
 
-django-app-where-you-store-the-new-backend/django-auth0-backend.py
+**MODIFY IN** django-app-where-you-store-the-new-backend/django-auth0-backend.py
 > from your_app import config as c **TO** from your_app import settings as c 
