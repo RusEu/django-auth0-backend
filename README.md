@@ -12,13 +12,15 @@ If you need it in Django:
 
 If you need it in Django Rest FrameworkL
 
->REST_FRAMEWORK = {
->    'DEFAULT_AUTHENTICATION_CLASSES': (
->        'django-app-where-you-store-the-new-backend.django-auth0-backend', #your new auth0 backend
->        'rest_framework.authentication.BasicAuthentication',
->        'rest_framework.authentication.SessionAuthentication',
->    )
->}
+><pre>
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'django-app-where-you-store-the-new-backend.django-auth0-backend', #your new auth0 backend
+        'rest_framework.authentication.BasicAuthentication',
+        'rest_framework.authentication.SessionAuthentication',
+    )
+}
+</pre>
 
 in the django-auth0-backend you need to change the import config file with the file where you store your Auth0 domain.
 Example:
