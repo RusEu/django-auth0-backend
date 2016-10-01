@@ -1,8 +1,11 @@
+from django.conf import settings
 from django.contrib.auth.models import User
+
 from rest_framework import authentication
 from rest_framework import exceptions
-from your_project import settings as c
+
 import requests
+
 
 class Auth0Backend(authentication.BaseAuthentication):
     def authenticate(self, request):
@@ -25,7 +28,7 @@ class Auth0Backend(authentication.BaseAuthentication):
 
     def get_profile(self,token):
         url = 'https://%s/userinfo?access_token=%s'
-        user_url = url % (c.AUTH0_DOMAIN,token)
+        user_url = url % (settings.AUTH0_DOMAIN, token)
 
         user_info = requests.get(user_url)
         try :
