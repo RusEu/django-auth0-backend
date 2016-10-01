@@ -34,9 +34,7 @@ class Auth0Backend(authentication.BaseAuthentication):
             raise exceptions.AuthenticationFailed(user_info.text)
 
     def get_or_create_user(self, **kwargs):
-        print "get_or_create"
         username = kwargs.pop('user_id')
-        print username
         if username:
             try:
                 return User.objects.get(username__iexact=username)
