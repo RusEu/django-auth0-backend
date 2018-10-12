@@ -5,7 +5,7 @@ Django authentication backend for Auth0
 
 If you need it in Django:
 
-><pre>
+<pre>
 AUTHENTICATION_BACKENDS = (
     'django.contrib.auth.backends.ModelBackend', #Your by default django auth backend
     'django-app-where-you-store-the-new-backend.django-auth0-backend', #your new auth0 backend
@@ -14,7 +14,7 @@ AUTHENTICATION_BACKENDS = (
 
 If you need it in Django Rest Framework
 
-><pre>
+<pre>
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': (
         'django-app-where-you-store-the-new-backend.django-auth0-backend', #your new auth0 backend
